@@ -168,5 +168,10 @@ public:
 
 	}
 
+	bool IsEmpty() {
+
+		return _Size == 0;
+
+	}
 
 };
