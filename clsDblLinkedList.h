@@ -1,0 +1,154 @@
+#pragma once
+#include <iostream>
+using namespace std;
+
+template <class T>
+class clsDblLinkedList
+{
+
+public:
+
+	class Node
+	{
+	public:
+		T value;
+		Node* prev;
+		Node* next;
+	};
+
+	Node* head = NULL;
+
+	void InsertAtBeginning(T value) {
+
+		Node* new_node = new Node();
+
+		new_node->value = value;
+		new_node->prev = NULL;
+		new_node->next = head;
+
+		if (head != NULL) {
+			head->prev = new_node;
+		}
+
+		head = new_node;
+
+	}
+
+	Node* Find(T value) {
+
+		Node* current = head;
+
+		while (current != NULL && current->value != value) {
+			current = current->next;
+		}
+
+		return current;
+
+	}
+
+	void PrintList() {
+
+		Node* current = head;
+
+		while (current != NULL) {
+			cout << current->value << " ";
+			current = current->next;
+		}
+		cout << "\n";
+
+	}
+
+	void InsertAfter(Node* current, T value) {
+
+		Node* new_node = new Node();
+
+		new_node->value = value;
+		new_node->prev = current;
+		new_node->next = current->next;
+
+		if (current->next != NULL) {
+			current->next->prev = new_node;
+		}
+
+		current->next = new_node;
+
+	}
+
+	void InsertAtEnd(int value) {
+
+		Node* new_node = new Node();
+
+		new_node->value = value;
+		new_node->next = NULL;
+
+		if (head == NULL) {
+			new_node->prev = NULL;
+			head = new_node;
+			return;
+		}
+
+		Node* current = head;
+		while (current->next != NULL) {
+			current = current->next;
+		}
+
+		current->next = new_node;
+		new_node->prev = current;
+
+	}
+
+	void DeleteNode(Node*& node_to_delete) {
+
+		if (head == NULL || node_to_delete == NULL) return;
+
+		if (head == node_to_delete)
+			head = node_to_delete->next;
+
+		if (node_to_delete->next != NULL)
+			node_to_delete->next->prev = node_to_delete->prev;
+
+		if (node_to_delete->prev != NULL)
+			node_to_delete->prev->next = node_to_delete->next;
+
+		delete node_to_delete;
+
+	}
+
+	void DeleteFirstNode() {
+
+		if (head == NULL) return;
+
+		Node* temp = head;
+		head = head->next;
+
+		if (head != NULL) {
+			head->prev = NULL;
+		}
+
+		delete temp;
+
+	}
+
+	void DeleteLastNode() {
+
+		if (head == NULL) return;
+
+		if (head->next == NULL) {
+			delete head;
+			head = NULL;
+			return;
+		}
+
+		Node* current = head;
+
+		while (current->next != NULL) {
+			current = current->next;
+		}
+
+		current->prev->next = NULL;
+		delete current;
+
+	}
+
+
+};
