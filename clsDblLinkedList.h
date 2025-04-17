@@ -174,4 +174,14 @@ public:
 
 	}
 
+	void Clear() {
+
+		while (_Size > 0) {
+
+			DeleteFirstNode();
+
+		}
+
+	}
+
 };
