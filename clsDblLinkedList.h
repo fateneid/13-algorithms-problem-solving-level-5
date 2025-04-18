@@ -205,5 +205,17 @@ public:
 
 	}
 
+	Node* GetNode(int index) {
+
+		if (index > _Size - 1 || index < 0 || head == NULL) return NULL;
+
+		Node* current = head;
+		while (index-- && current != NULL) {
+			current = current->next;
+		}
+
+		return current;
+
+	}
 
 };
