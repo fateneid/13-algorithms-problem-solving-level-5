@@ -207,7 +207,7 @@ public:
 
 	Node* GetNode(int index) {
 
-		if (index > _Size - 1 || index < 0 || head == NULL) return NULL;
+		if (index < 0 || index >= _Size) return NULL;
 
 		Node* current = head;
 		while (index-- && current != NULL) {
@@ -215,6 +215,17 @@ public:
 		}
 
 		return current;
+
+	}
+
+	T GetItem(int index) {
+
+		Node* ItemNode = GetNode(index);
+		
+		if (ItemNode == NULL)
+			return NULL;
+		else
+			return ItemNode->value;
 
 	}
 
