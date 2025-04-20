@@ -229,4 +229,15 @@ public:
 
 	}
 
+	bool UpdateItem(int index, T new_value) {
+
+		if (Node* ItemNode = GetNode(index)) {
+			ItemNode->value = new_value;
+			return true;
+		}
+
+		return false;
+
+	}
+
 };
