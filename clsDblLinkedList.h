@@ -240,4 +240,14 @@ public:
 
 	}
 
+	bool InsertAfter(int index, T value) {
+
+		if (Node* ItemNode = GetNode(index)) {
+			InsertAfter(ItemNode, value);
+			return true;
+		}
+		return false;
+
+	}
+
 };
