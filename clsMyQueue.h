@@ -60,7 +60,7 @@ public:
 
 	void UpdateItem(int index, T new_value)
 	{
-		_MyList.UpdateItem(index, value);
+		_MyList.UpdateItem(index, new_value);
 	}
 
 	void InsertAfter(int index, T value)
