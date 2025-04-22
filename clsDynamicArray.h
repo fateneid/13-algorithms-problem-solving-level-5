@@ -71,5 +71,26 @@ public:
 
 	}
 
+	T GetItem(int index)
+	{
+		return OriginalArray[index];
+	}
+
+	void Reverse()
+	{
+		for (int i = 0; i < _Size / 2; i++) {
+			swap(OriginalArray[i], OriginalArray[_Size - i - 1]);
+		}
+	}
+
+	void Clear()
+	{
+		_Size = 0;
+		_TempArray = new T[0];
+		delete[] OriginalArray;
+		OriginalArray = _TempArray;
+
+	}
+
 };
 
