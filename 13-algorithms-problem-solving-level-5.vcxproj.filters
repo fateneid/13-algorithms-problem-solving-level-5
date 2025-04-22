@@ -32,5 +32,8 @@
     <ClInclude Include="clsMyStack.h">
       <Filter>Header Files\DS</Filter>
     </ClInclude>
+    <ClInclude Include="clsDynamicArray.h">
+      <Filter>Header Files\DS</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
