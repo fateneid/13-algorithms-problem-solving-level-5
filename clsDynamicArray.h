@@ -176,6 +176,25 @@ public:
 
 	}
 
+	bool InsertAtBeginning(T value)
+	{
+		return InsertAt(0, value);
+	}
+
+	bool InsertBefore(int index, T value)
+	{
+		return InsertAt(index - 1, value);
+	}
+
+	bool InsertAfter(int index, T value)
+	{
+		return InsertAt(index + 1, value);
+	}
+
+	bool InsertAtEnd(T value)
+	{
+		return InsertAt(_Size, value);
+	}
 
 };
 
