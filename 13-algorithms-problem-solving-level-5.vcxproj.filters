@@ -35,5 +35,8 @@
     <ClInclude Include="clsDynamicArray.h">
       <Filter>Header Files\DS</Filter>
     </ClInclude>
+    <ClInclude Include="clsMyQueueArr.h">
+      <Filter>Header Files\DS</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
