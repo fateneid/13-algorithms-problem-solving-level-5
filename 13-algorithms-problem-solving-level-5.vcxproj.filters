@@ -41,5 +41,8 @@
     <ClInclude Include="clsMyStackArr.h">
       <Filter>Header Files\DS</Filter>
     </ClInclude>
+    <ClInclude Include="clsMyString.h">
+      <Filter>Header Files\DS</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
