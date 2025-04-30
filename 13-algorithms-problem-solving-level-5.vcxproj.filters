@@ -16,6 +16,9 @@
     <Filter Include="Header Files\DS">
       <UniqueIdentifier>{65abf129-75c1-4978-af47-3b8d84bb806d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Lib">
+      <UniqueIdentifier>{d7abaa09-c491-4665-9dd4-edd351bacc69}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="13-algorithms-problem-solving-level-5.cpp">
@@ -44,11 +47,14 @@
     <ClInclude Include="clsMyString.h">
       <Filter>Header Files\DS</Filter>
     </ClInclude>
-    <ClInclude Include="clsDate.h">
-      <Filter>Header Files\DS</Filter>
-    </ClInclude>
     <ClInclude Include="clsQueueLine.h">
       <Filter>Header Files\DS</Filter>
+    </ClInclude>
+    <ClInclude Include="clsString.h">
+      <Filter>Header Files\Lib</Filter>
+    </ClInclude>
+    <ClInclude Include="clsDate.h">
+      <Filter>Header Files\Lib</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
